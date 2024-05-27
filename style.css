@@ -14,8 +14,17 @@ body {
     padding: 20px;
 }
 
-.sidebar ul {
+.sidebar h1 {
+    text-align: left;
+    padding: 50px;
+    padding-left: 0;
+}
+
+.sidebar ul li{
     list-style-type: none;
+    padding: 10px;
+    padding-left: 0;
+    text-align: left;
 }
 
 .main-content {
