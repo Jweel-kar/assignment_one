@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment one</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="sidebar">
+        <h1>The company</h1>
+        <ul>
+            <li>Home</li>
+            <li>Showcase</li>
+            <li>Services</li>
+            <li>Designers</li>
+            <li>Packages</li>
+            <li>Contact</li>
+        </ul>
+    </div>
+    <div class="main-content">
+        <section class="packages">
+            <h2>Packages</h2>
+            <div class="package">
+                <button id="minus">-</button>
+                <span id="room-count">1 room</span>
+                <button id="plus">+</button>
+                <span id="price">$199</span>
+            </div>
+            <button id="sign-up">Sign Up</button>
+            <p id="thank-you" style="display: none;"></p>
+        </section>
+        <section class="contact">
+            <h2>Contact Us</h2>
+            <form id="contact-form">
+                <input type="text" id="name" placeholder="Name">
+                <input type="email" id="email" placeholder="Email">
+                <textarea id="message" placeholder="Message"></textarea>
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
