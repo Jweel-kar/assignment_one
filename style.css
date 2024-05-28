@@ -162,7 +162,7 @@ body {
 
 .package-item {
     width: 45%;
-    background-color: #f9f9f9;
+    background-color: #ebe5e5;
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center;
@@ -192,6 +192,43 @@ body {
     background-color: orangered; /* Pro package header color */
 }
 
+#plus, #minus {
+    background-color: transparent;
+    border: none;
+    color: inherit; /* Inherit the color from the parent element */
+    /* font: inherit;  Inherit the font from the parent element */
+    cursor: pointer;
+    padding: 10px; /* Adjust padding as needed */
+    font-size: 30px;
+}
+
+#plus:hover, #minus:hover,
+#plus:focus, #minus:focus {
+    outline: none; /* Remove the default focus outline */
+    background-color: rgba(0, 0, 0, 0.1); /* Add a subtle background color on hover/focus */
+}
+
+#plus:active, #minus:active {
+    background-color: rgba(0, 0, 0, 0.2); /* Slightly darker background on click */
+}
+
+#price {
+    font-size: 25px;
+}
+
+.signup-button {
+    padding: 15px 25px 15px 25px;
+    border: none;
+    background-color: orangered;
+    color: white;
+    font-size: 15px;
+}
+
+.signup-button:hover {
+    background-color: white;
+    color: #000;
+}
+
 .contact {
     margin-bottom: 20px;
 }
@@ -201,7 +238,6 @@ body {
 }
 
 #contact-form input,
-#contact-form textarea,
 #contact-form button {
     width: 100%;
     padding: 10px;
@@ -221,6 +257,11 @@ body {
 #send-message:hover {
     background-color: darkred;
 }
+
+.footer {
+    background-color: #f3eeee; /* Change to your preferred color */
+     height: 100px; /* Adjust height as needed */
+ }
 
 #thank-you {
     margin-top: 10px;
