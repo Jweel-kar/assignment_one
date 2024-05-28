@@ -200,17 +200,26 @@ body {
     margin-bottom: 0;
 }
 
-#name, #email, #message {
+#contact-form input,
+#contact-form textarea,
+#contact-form button {
+    width: 100%;
     padding: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
 }
 
 #send-message {
-    padding: 10px;
     margin-top: 20px;
     cursor: pointer;
     background-color: orangered;
     color: white;
     font-weight: bold;
+    border: none;
+}
+
+#send-message:hover {
+    background-color: darkred;
 }
 
 #thank-you {

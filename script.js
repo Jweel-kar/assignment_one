@@ -26,12 +26,17 @@ document.addEventListener("DOMContentLoaded", () => {
         const name = document.getElementById("name").value.trim();
         const email = document.getElementById("email").value.trim();
         const message = document.getElementById("message").value.trim();
-
+    
         if (!name || !email || !message) {
             alert("All fields are required!");
             event.preventDefault();
+        } else {
+            alert(`Thank you, ${name}! Your message has been sent.`);
+            document.getElementById("contact-form").reset();
+            event.preventDefault(); // Prevent default form submission
         }
     });
+    
 
     function updateDisplay() {
         roomCountEl.textContent = `${roomCount} room${roomCount > 1 ? 's' : ''}`;
