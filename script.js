@@ -22,6 +22,52 @@ document.addEventListener("DOMContentLoaded", () => {
         thankYouEl.style.display = "block";
     });
 
+// document.addEventListener("DOMContentLoaded", () => {
+//     const roomCounts = {
+//         basic: 1,
+//         pro: 1
+//     };
+//     const prices = {
+//         basic: 199,
+//         pro: 249
+//     };
+
+//     function updateDisplay(type) {
+//         const roomCountEl = document.querySelector(`.room-count[data-type=${type}]`);
+//         const priceEl = document.querySelector(`.price[data-type=${type}]`);
+
+//         roomCountEl.textContent = `${roomCounts[type]} room${roomCounts[type] > 1 ? 's' : ''}`;
+//         priceEl.textContent = `$${roomCounts[type] * prices[type]}`;
+//     }
+
+//     document.querySelectorAll(".plus").forEach(button => {
+//         button.addEventListener("click", () => {
+//             const type = button.getAttribute("data-type");
+//             roomCounts[type]++;
+//             updateDisplay(type);
+//         });
+//     });
+
+//     document.querySelectorAll(".minus").forEach(button => {
+//         button.addEventListener("click", () => {
+//             const type = button.getAttribute("data-type");
+//             if (roomCounts[type] > 1) {
+//                 roomCounts[type]--;
+//                 updateDisplay(type);
+//             }
+//         });
+//     });
+
+//     document.querySelectorAll(".signup-button").forEach(button => {
+//         button.addEventListener("click", () => {
+//             const type = button.getAttribute("data-type");
+//             const thankYouEl = document.getElementById("thank-you");
+//             thankYouEl.textContent = `Thank you for choosing ${roomCounts[type]} room${roomCounts[type] > 1 ? 's' : ''} (${type})`;
+//             thankYouEl.style.display = "block";
+//         });
+//     });
+// });
+
     document.getElementById("contact-form").addEventListener("submit", (event) => {
         const name = document.getElementById("name").value.trim();
         const email = document.getElementById("email").value.trim();

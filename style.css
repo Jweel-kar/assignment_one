@@ -240,6 +240,16 @@ body {
     color: #000;
 }
 
+/* Thank You Message */
+#thank-you {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border: 1px solid #ccc;
+    text-align: center;
+    font-size: 18px;
+}
+
 .contact {
     margin-bottom: 20px;
 }
@@ -274,7 +284,3 @@ body {
     height: 100px; /* Adjust height as needed */
  }
 
-#thank-you {
-    margin-top: 10px;
-    font-weight: bold;
-}
