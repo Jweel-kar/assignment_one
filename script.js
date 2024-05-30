@@ -1,73 +1,61 @@
-document.addEventListener("DOMContentLoaded", () => {
-    const roomCountEl = document.getElementById("room-count");
-    const priceEl = document.getElementById("price");
-    const thankYouEl = document.getElementById("thank-you");
-    let roomCount = 1;
-    const pricePerRoom = 199;
+// Code for Packages section
 
-    document.getElementById("plus").addEventListener("click", () => {
-        roomCount++;
-        updateDisplay();
+document.addEventListener("DOMContentLoaded", () => {
+    const roomCounts = {
+        basic: 1,
+        pro: 1
+    };
+    const prices = {
+        basic: 199,
+        pro: 249
+    };
+
+    function updateDisplay(type) {
+        const roomCountEl = document.getElementById(`room-count-${type}`);
+        const priceEl = document.getElementById(`price-${type}`);
+        
+        roomCountEl.textContent = `${roomCounts[type]} room${roomCounts[type] > 1 ? 's' : ''}`;
+        priceEl.textContent = `$${roomCounts[type] * prices[type]}`;
+    }
+
+    document.getElementById("plus-basic").addEventListener("click", () => {
+        roomCounts.basic++;
+        updateDisplay("basic");
     });
 
-    document.getElementById("minus").addEventListener("click", () => {
-        if (roomCount > 1) {
-            roomCount--;
-            updateDisplay();
+    document.getElementById("minus-basic").addEventListener("click", () => {
+        if (roomCounts.basic > 1) {
+            roomCounts.basic--;
+            updateDisplay("basic");
         }
     });
 
-    document.getElementById("sign-up").addEventListener("click", () => {
-        thankYouEl.textContent = `Thank you for choosing ${roomCount} room${roomCount > 1 ? 's' : ''}`;
+    document.getElementById("plus-pro").addEventListener("click", () => {
+        roomCounts.pro++;
+        updateDisplay("pro");
+    });
+
+    document.getElementById("minus-pro").addEventListener("click", () => {
+        if (roomCounts.pro > 1) {
+            roomCounts.pro--;
+            updateDisplay("pro");
+        }
+    });
+
+    document.getElementById("sign-up-basic").addEventListener("click", () => {
+        const thankYouEl = document.getElementById("thank-you");
+        thankYouEl.textContent = `Thank you for choosing ${roomCounts.basic} room${roomCounts.basic > 1 ? 's' : ''} (Basic)`;
         thankYouEl.style.display = "block";
     });
 
-// document.addEventListener("DOMContentLoaded", () => {
-//     const roomCounts = {
-//         basic: 1,
-//         pro: 1
-//     };
-//     const prices = {
-//         basic: 199,
-//         pro: 249
-//     };
+    document.getElementById("sign-up-pro").addEventListener("click", () => {
+        const thankYouEl = document.getElementById("thank-you");
+        thankYouEl.textContent = `Thank you for choosing ${roomCounts.pro} room${roomCounts.pro > 1 ? 's' : ''} (Pro)`;
+        thankYouEl.style.display = "block";
+    });
+});
 
-//     function updateDisplay(type) {
-//         const roomCountEl = document.querySelector(`.room-count[data-type=${type}]`);
-//         const priceEl = document.querySelector(`.price[data-type=${type}]`);
-
-//         roomCountEl.textContent = `${roomCounts[type]} room${roomCounts[type] > 1 ? 's' : ''}`;
-//         priceEl.textContent = `$${roomCounts[type] * prices[type]}`;
-//     }
-
-//     document.querySelectorAll(".plus").forEach(button => {
-//         button.addEventListener("click", () => {
-//             const type = button.getAttribute("data-type");
-//             roomCounts[type]++;
-//             updateDisplay(type);
-//         });
-//     });
-
-//     document.querySelectorAll(".minus").forEach(button => {
-//         button.addEventListener("click", () => {
-//             const type = button.getAttribute("data-type");
-//             if (roomCounts[type] > 1) {
-//                 roomCounts[type]--;
-//                 updateDisplay(type);
-//             }
-//         });
-//     });
-
-//     document.querySelectorAll(".signup-button").forEach(button => {
-//         button.addEventListener("click", () => {
-//             const type = button.getAttribute("data-type");
-//             const thankYouEl = document.getElementById("thank-you");
-//             thankYouEl.textContent = `Thank you for choosing ${roomCounts[type]} room${roomCounts[type] > 1 ? 's' : ''} (${type})`;
-//             thankYouEl.style.display = "block";
-//         });
-//     });
-// });
-
+    // Code for Contact form
     document.getElementById("contact-form").addEventListener("submit", (event) => {
         const name = document.getElementById("name").value.trim();
         const email = document.getElementById("email").value.trim();
@@ -88,4 +76,3 @@ document.addEventListener("DOMContentLoaded", () => {
         roomCountEl.textContent = `${roomCount} room${roomCount > 1 ? 's' : ''}`;
         priceEl.textContent = `$${roomCount * pricePerRoom}`;
     }
-});

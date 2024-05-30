@@ -203,7 +203,7 @@ body {
     background-color: orangered; /* Pro package header color */
 }
 
-#plus, #minus {
+.plus, .minus {
     background-color: transparent;
     border: none;
     color: inherit; /* Inherit the color from the parent element */
@@ -213,21 +213,21 @@ body {
     font-size: 30px;
 }
 
-#plus:hover, #minus:hover,
-#plus:focus, #minus:focus {
+.plus:hover, .minus:hover,
+.plus:focus, .minus:focus {
     outline: none; /* Remove the default focus outline */
     background-color: rgba(0, 0, 0, 0.1); /* Add a subtle background color on hover/focus */
 }
 
-#plus:active, #minus:active {
+.plus:active, .minus:active {
     background-color: rgba(0, 0, 0, 0.2); /* Slightly darker background on click */
 }
 
-#price {
+.price {
     font-size: 25px;
 }
 
-.signup-button {
+#sign-up-basic {
     padding: 15px 25px 15px 25px;
     border: none;
     background-color: orangered;
@@ -235,7 +235,20 @@ body {
     font-size: 15px;
 }
 
-.signup-button:hover {
+#sign-up-basic:hover {
+    background-color: white;
+    color: #000;
+}
+
+#sign-up-pro {
+    padding: 15px 25px 15px 25px;
+    border: none;
+    background-color: orangered;
+    color: white;
+    font-size: 15px;
+}
+
+#sign-up-pro:hover {
     background-color: white;
     color: #000;
 }
