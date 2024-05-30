@@ -43,15 +43,15 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     document.getElementById("sign-up-basic").addEventListener("click", () => {
-        const thankYouEl = document.getElementById("thank-you");
-        thankYouEl.textContent = `Thank you for choosing ${roomCounts.basic} room${roomCounts.basic > 1 ? 's' : ''} (Basic)`;
-        thankYouEl.style.display = "block";
+        const thankYouEl = document.getElementById("thank-you-basic").children[0];
+        thankYouEl.textContent = `Thank you for choosing ${roomCounts.basic} room${roomCounts.basic > 1 ? 's' : ''}`;
+        document.getElementById("thank-you-basic").style.display = "table-row";
     });
-
+    
     document.getElementById("sign-up-pro").addEventListener("click", () => {
-        const thankYouEl = document.getElementById("thank-you");
-        thankYouEl.textContent = `Thank you for choosing ${roomCounts.pro} room${roomCounts.pro > 1 ? 's' : ''} (Pro)`;
-        thankYouEl.style.display = "block";
+        const thankYouEl = document.getElementById("thank-you-pro").children[0];
+        thankYouEl.textContent = `Thank you for choosing ${roomCounts.pro} room${roomCounts.pro > 1 ? 's' : ''}`;
+        document.getElementById("thank-you-pro").style.display = "table-row";
     });
 });
 
@@ -70,9 +70,3 @@ document.addEventListener("DOMContentLoaded", () => {
             event.preventDefault(); // Prevent default form submission
         }
     });
-    
-
-    function updateDisplay() {
-        roomCountEl.textContent = `${roomCount} room${roomCount > 1 ? 's' : ''}`;
-        priceEl.textContent = `$${roomCount * pricePerRoom}`;
-    }

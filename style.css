@@ -254,11 +254,21 @@ body {
 }
 
 /* Thank You Message */
-#thank-you {
+#thank-you-basic {
     margin-top: 20px;
     padding: 20px;
     background-color: #f4f4f4;
-    border: 1px solid #ccc;
+    /* border: 1px solid #ccc; */
+    text-align: center;
+    font-size: 18px;
+}
+
+/* Thank You Message */
+#thank-you-pro {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f4f4f4;
+    /* border: 1px solid #ccc; */
     text-align: center;
     font-size: 18px;
 }
